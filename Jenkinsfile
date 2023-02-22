@@ -3,13 +3,13 @@
 import groovy.json.JsonSlurperClassic
 
 node {
-    def SF_CONSUMER_KEY='3MVG9rrOVHA54N6PjnHOm2BlHZhUL68B3gXoRBtRsXO9kLvJMVjf_4aZ5PnhNyF_TxfcAB7nbTKFNEcRkvq96'
-    def SF_USERNAME='orlando.arias@tribal.credit.dtqa'
-    def SERVER_KEY_CREDENTALS_ID='f719a5cc-b0e7-469e-a30a-bc31aad0b0b1'
+    def SF_CONSUMER_KEY=env.SF_CONSUMER_KEY
+    def SF_USERNAME=env.SF_USERNAME
+    def SERVER_KEY_CREDENTALS_ID=env.SERVER_KEY_CREDENTALS_ID
     def TEST_LEVEL='RunLocalTests'
     def PACKAGE_NAME='04t1.1'
     def PACKAGE_VERSION
-    def SF_INSTANCE_URL = env.SF_INSTANCE_URL ?: "https://tribal01--dtqa.sandbox.my.salesforce.com"
+    def SF_INSTANCE_URL = env.SF_INSTANCE_URL ?: "https://login.salesforce.com"
 
     def toolbelt = tool 'toolbelt'
 
@@ -37,7 +37,7 @@ node {
             // -------------------------------------------------------------------------
 
             stage('Authorize DevHub') {
-                rc = command "${toolbelt}/sfdx force:auth:jwt:grant --instanceurl ${SF_INSTANCE_URL} --clientid ${SF_CONSUMER_KEY} --username ${SF_USERNAME} --jwtkeyfile ${server_key_file}"
+                rc = command "${toolbelt}/sfdx force:auth:jwt:grant --instanceurl ${SF_INSTANCE_URL} --clientid ${SF_CONSUMER_KEY} --username ${SF_USERNAME} --jwtkeyfile ${server_key_file} --setdefaultdevhubusername --setalias HubOrg"
                 if (rc != 0) {
                     error 'Salesforce dev hub org authorization failed.'
                 }
