@@ -5,7 +5,7 @@ import groovy.json.JsonSlurperClassic
 node {
     def SF_CONSUMER_KEY=env.SF_CONSUMER_KEY
     def SF_USERNAME=env.SF_USERNAME
-    def SERVER_KEY_CREDENTALS_ID=env.SERVER_KEY_CREDENTALS_ID
+    def SERVER_KEY_CREDENTALS_ID='f719a5cc-b0e7-469e-a30a-bc31aad0b0b1'
     def TEST_LEVEL='RunLocalTests'
     def PACKAGE_NAME='04t1.1'
     def PACKAGE_VERSION
@@ -30,7 +30,7 @@ node {
     
     withEnv(["HOME=${env.WORKSPACE}"]) {
         
-        //withCredentials([file(credentialsId: SERVER_KEY_CREDENTALS_ID, variable: 'server_key_file')]) {
+        withCredentials([file(credentialsId: SERVER_KEY_CREDENTALS_ID, variable: 'server_key_file')]) {
 
             // -------------------------------------------------------------------------
             // Authorize the Dev Hub org with JWT key and give it an alias.
