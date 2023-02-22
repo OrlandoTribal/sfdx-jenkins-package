@@ -28,7 +28,7 @@ node {
     // JWT key credentials.
     // -------------------------------------------------------------------------
     
-    withEnv(["HOME=${env.WORKSPACE}"]) {
+    withEnv(["HOME='fork'"]) {
         
         withCredentials([file(credentialsId: SERVER_KEY_CREDENTALS_ID, variable: 'server_key_file')]) {
 
