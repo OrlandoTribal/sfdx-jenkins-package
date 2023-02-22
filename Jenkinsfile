@@ -9,7 +9,7 @@ node {
     def TEST_LEVEL='RunLocalTests'
     def PACKAGE_NAME='04t1.1'
     def PACKAGE_VERSION
-    def SF_INSTANCE_URL = env.SF_INSTANCE_URL ?: "https://login.salesforce.com"
+    def SF_INSTANCE_URL = env.SF_INSTANCE_URL ?: "https://tribal01--dtqa.sandbox.my.salesforce.com"
 
     def toolbelt = tool 'toolbelt'
 
