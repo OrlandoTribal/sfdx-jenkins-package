@@ -188,7 +188,7 @@ node {
                     error 'Salesforce package install scratch org deletion failed.'
                 }
             }
-        
+        }
     }
 }
 
