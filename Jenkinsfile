@@ -25,7 +25,7 @@ node {
                     error 'doesnt work'
                 }
         else{
-                            error ["HOME=${env.WORKSPACE}"
+            error ["HOME=${env.WORKSPACE}"]
 
         }
 
