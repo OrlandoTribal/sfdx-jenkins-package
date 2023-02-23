@@ -18,6 +18,13 @@ node {
     // Check out code from source control.
     // -------------------------------------------------------------------------
 
+    println SF_CONSUMER_KEY;
+    println SF_USERNAME;
+    println SERVER_KEY_CREDENTALS_ID;
+    println SF_INSTANCE_URL;
+
+    
+
     
     stage('checkout source') {
         checkout scm
