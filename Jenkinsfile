@@ -19,9 +19,10 @@ node {
     // -------------------------------------------------------------------------
 
     stage('checkout source') {
-       
-        echo ${PACKAGE_NAME}
         checkout scm
+        
+        
+        echo ${PACKAGE_NAME}
     }
 
 
