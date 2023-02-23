@@ -25,7 +25,7 @@ node {
                     error 'doesnt work'
                 }
         else{
-                            error SERVER_KEY_CREDENTALS_ID
+                            error ["HOME=${env.WORKSPACE}"
 
         }
 
