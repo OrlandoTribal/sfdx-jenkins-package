@@ -20,7 +20,14 @@ node {
 
     
     stage('review environment variabels') {
-        echo ${PACKAGE_NAME}
+        
+         if (${SF_INSTANCE_URL} != null) {
+                    error 'doesnt work'
+                }
+        else{
+                            error 'no null variable'
+
+        }
 
     }
     stage('checkout source') {
