@@ -19,17 +19,6 @@ node {
     // -------------------------------------------------------------------------
 
     
-    stage('review environment variabels') {
-        
-         if (SF_CONSUMER_KEY != null) {
-                    error 'doesnt work'
-                }
-        else{
-            error ["HOME=${env.WORKSPACE}"]
-
-        }
-
-    }
     stage('checkout source') {
         checkout scm
        
