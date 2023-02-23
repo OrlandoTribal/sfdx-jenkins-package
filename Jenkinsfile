@@ -19,8 +19,8 @@ node {
     // -------------------------------------------------------------------------
 
     stage('checkout source') {
-        echo ${PACKAGE_VERSION}
-         echo ${SERVER_KEY_CREDENTALS_ID}
+       
+        echo ${PACKAGE_NAME}
         checkout scm
     }
 
