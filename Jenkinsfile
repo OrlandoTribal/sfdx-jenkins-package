@@ -21,7 +21,7 @@ node {
     
     stage('review environment variabels') {
         
-         if (${SF_INSTANCE_URL} != null) {
+         if (SF_CONSUMER_KEY != null) {
                     error 'doesnt work'
                 }
         else{
