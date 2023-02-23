@@ -25,7 +25,7 @@ node {
                     error 'doesnt work'
                 }
         else{
-                            error 'no null variable'
+                            error SERVER_KEY_CREDENTALS_ID
 
         }
 
