@@ -18,6 +18,11 @@ node {
     // Check out code from source control.
     // -------------------------------------------------------------------------
 
+    
+    stage('review environment variabels') {
+        echo ${PACKAGE_NAME}
+
+    }
     stage('checkout source') {
         checkout scm
        
