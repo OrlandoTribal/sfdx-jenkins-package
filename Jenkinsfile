@@ -22,6 +22,9 @@ node {
     println SF_CONSUMER_KEY;
     println SF_USERNAME;
     println SERVER_KEY_CREDENTALS_ID;
+    println 'new test var';
+    println env.TEST_ENV;
+    println env.WORKSPACE;
     println TEST_ENV;
     println SF_INSTANCE_URL;
     
