@@ -22,7 +22,7 @@ node {
     println SF_CONSUMER_KEY;
     println SF_USERNAME;
     println SERVER_KEY_CREDENTALS_ID;
-    println 'Pipelines changing params';
+    println 'Approved signatures';
     println params.TEST_ENV;
     println env.WORKSPACE;
     println TEST_ENV;
