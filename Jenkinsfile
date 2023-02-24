@@ -22,8 +22,8 @@ node {
     println SF_CONSUMER_KEY;
     println SF_USERNAME;
     println SERVER_KEY_CREDENTALS_ID;
-    println 'Pipelines testing';
-    println env.TEST_ENV;
+    println 'Pipelines changing params';
+    println params.TEST_ENV;
     println env.WORKSPACE;
     println TEST_ENV;
     println SF_INSTANCE_URL;
