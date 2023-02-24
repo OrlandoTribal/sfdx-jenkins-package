@@ -10,11 +10,14 @@ node {
     def PACKAGE_NAME='04t1.1'
     def PACKAGE_VERSION
     def TEST_ENV = env.TESTING
+    def workspaceDir
     def SF_INSTANCE_URL = env.SF_INSTANCE_URL ?: "https://login.salesforce.com"
 
     def toolbelt = tool 'toolbelt'
 
-
+    environment {
+        workspaceDir=${TESTING}
+    }
     // -------------------------------------------------------------------------
     // Check out code from source control.
     // -------------------------------------------------------------------------
@@ -22,9 +25,9 @@ node {
     println SF_CONSUMER_KEY;
     println SF_USERNAME;
     println SERVER_KEY_CREDENTALS_ID;
-    println 'Approved signatures';
+    println 'Approved signatures changed';
     println params.TEST_ENV;
-    println env.WORKSPACE;
+    println workspaceDir;
     println TESTING;
     println SF_INSTANCE_URL;
     
