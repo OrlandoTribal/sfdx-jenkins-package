@@ -9,7 +9,7 @@ node {
     def TEST_LEVEL='RunLocalTests'
     def PACKAGE_NAME='04t1.1'
     def PACKAGE_VERSION
-    def TEST_ENV = env.TEST_ENV
+    def TEST_ENV = env.TESTING
     def SF_INSTANCE_URL = env.SF_INSTANCE_URL ?: "https://login.salesforce.com"
 
     def toolbelt = tool 'toolbelt'
@@ -25,7 +25,7 @@ node {
     println 'Approved signatures';
     println params.TEST_ENV;
     println env.WORKSPACE;
-    println TEST_ENV;
+    println TESTING;
     println SF_INSTANCE_URL;
     
 
